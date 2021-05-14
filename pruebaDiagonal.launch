@@ -1,0 +1,13 @@
+<launch>
+      		
+	<node pkg="turtlesim" type="turtlesim_node" name="simulador" />
+
+	
+	<node pkg="rosservice" type="rosservice" args="call --wait /spawn 1 10 5.498 'turtle2'" 	name="load_turtle2" />
+
+
+	<node pkg="proye" type="angry_turtle_controller.py" name="angry" />
+
+
+
+</launch>

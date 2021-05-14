@@ -1,0 +1,33 @@
+<launch>
+      		
+	<node pkg="turtlesim" type="turtlesim_node" name="simulador" />
+
+	<node pkg="rosservice" type="rosservice" args="call --wait /kill 'turtle1'" 	name="kill_turtle1"/>
+
+	<node pkg="rosservice" type="rosservice" args="call --wait /spawn 3 1 1.57 'turtle2'" 	name="load_turtle2" />
+
+	<node pkg="rosservice" type="rosservice" args="call --wait /spawn 4.5 1 1.57 'turtle3'" 	name="load_turtle3" />
+
+	<node pkg="rosservice" type="rosservice" args="call --wait /spawn 6.5 1 1.57 'turtle4'" 	name="load_turtle4" />
+
+	<node pkg="rosservice" type="rosservice" args="call --wait /spawn 8 1 1.57 'turtle5'" 	name="load_turtle5" />
+
+	<node pkg="rosservice" type="rosservice" args="call --wait /spawn 10 1 1.57 'turtle6'" 	name="load_turtle6" />
+
+	<node pkg="rosservice" type="rosservice" args="call --wait /spawn 1.5 1 1.57 'turtle1'" 	name="load_turtle_1" />
+
+	<node pkg="proye" type="turtle2.py" name="t2" />
+
+	<node pkg="proye" type="trayectoria1.py" name="t1" />
+
+	<node pkg="proye" type="trayectoria3.py" name="t3" />
+
+	<node pkg="proye" type="trayectoria4.py" name="t4" />
+
+	<node pkg="proye" type="trayectoria5.py" name="t5" />
+
+	<node pkg="proye" type="trayectoria6.py" name="t6" />
+
+
+
+</launch>
